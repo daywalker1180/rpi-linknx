@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<!-- *** EXMAPLE config file *** -->
+
+<config>
+        <logging level="DEBUG" output="/linknx_log/linknx_logger.log" />
+        <!-- logging format="simple" output="/linknx_log/linknx_logger.log" level="DEBUG" maxfilesize="4096" maxfileindex="10" / -->
+
+        <services>
+                <knxconnection url="ip:127.0.0.1" />
+                <persistence type="file" path="/linknx_persist" logpath="/linknx_persist" />
+        </services>
+
+        <objects>
+                <object id="Dummy" gad="0/1/0" type="">Dummy</object>
+        </objects>
+
+</config>
+
