@@ -4,7 +4,6 @@
 
 <config>
         <logging level="DEBUG" output="/linknx_log/linknx_logger.log" />
-        <!-- logging format="simple" output="/linknx_log/linknx_logger.log" level="DEBUG" maxfilesize="4096" maxfileindex="10" / -->
 
         <services>
                 <knxconnection url="ip:127.0.0.1" />

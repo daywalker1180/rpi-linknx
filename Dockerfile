@@ -18,5 +18,5 @@ RUN	dpkg -i libpthsem20_2.0.8_armhf.deb && \
 
 
 VOLUME  ["/linknx_config", "/linknx_persist", "/linknx_log"]
-CMD     ./linknx --config=/linknx_config/linknx.xml
+CMD     ["./linknx", "--config=/linknx_config/linknx.xml"]
 
