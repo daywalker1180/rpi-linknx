@@ -10,17 +10,13 @@ RUN     apt-get update && \
 ARG	VERSION
 
 ADD 	https://github.com/heziegl/rpi-linknx-build/raw/master/dist-$VERSION/linknx /linknx
-ADD     https://github.com/heziegl/rpi-linknx-build/raw/master/dist-$VERSION/libpthsem-compat_2.0.8_armhf.deb .
-ADD     https://github.com/heziegl/rpi-linknx-build/raw/master/dist-$VERSION/libpthsem-dbg_2.0.8_armhf.deb .
-ADD     https://github.com/heziegl/rpi-linknx-build/raw/master/dist-$VERSION/libpthsem-dev_2.0.8_armhf.deb .
 ADD     https://github.com/heziegl/rpi-linknx-build/raw/master/dist-$VERSION/libpthsem20_2.0.8_armhf.deb .
 
-RUN	dpkg -i libpthsem*.deb && \
-	rm libpthsem*.deb && \
+RUN	dpkg -i libpthsem20_2.0.8_armhf.deb && \
+	rm libpthsem20_2.0.8_armhf.deb && \
 	chmod +x linknx
 
 
 VOLUME  ["/linknx_config", "/linknx_persist", "/linknx_log"]
-#CMD     ./linknx --config=/linknx_config/linknx.xml --daemon=/linknx_log/linknx.log
 CMD     ./linknx --config=/linknx_config/linknx.xml
 
