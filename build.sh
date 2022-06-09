@@ -2,8 +2,8 @@
 
 
 # grafana git tag to build
-VERSION=0.0.1.32
-DOCKERHUBUSER=heziegl
+VERSION=0.0.1.38
+DOCKERHUBUSER=daywalker1180
 
 # docker image to build
 IMAGE_NAME=$DOCKERHUBUSER/rpi-linknx:$VERSION
